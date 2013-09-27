@@ -4,7 +4,7 @@
 #-------------
 
 getent group svn >/dev/null || groupadd -r svn
-getent passwd svn >/dev/null || useradd -r -g svn -d /var/clearos/subversion -s /sbin/nologin -c "Subversion" svn
+getent passwd svn >/dev/null || useradd -r -g svn -d /var/clearos/subversion/repository -s /sbin/nologin -c "Subversion" svn
 
 # Initialize storage
 #-------------------
