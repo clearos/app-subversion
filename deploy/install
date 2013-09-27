@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Add svn user
+#-------------
+
+getent group svn >/dev/null || groupadd -r svn
+getent passwd svn >/dev/null || useradd -r -g svn -d /var/clearos/subversion -s /sbin/nologin -c "Subversion" svn
+
+# Initialize storage
+#-------------------
+
+/usr/sbin/storage
