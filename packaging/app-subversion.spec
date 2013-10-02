@@ -2,7 +2,7 @@
 Name: app-subversion
 Epoch: 1
 Version: 1.5.0
-Release: 1%{dist}
+Release: 2%{dist}
 Summary: Subversion - Core
 License: LGPLv3
 Group: ClearOS/Libraries
@@ -32,7 +32,7 @@ mkdir -p -m 755 %{buildroot}/usr/clearos/apps/subversion
 cp -r * %{buildroot}/usr/clearos/apps/subversion/
 
 install -d -m 0755 %{buildroot}/var/clearos/subversion
-install -d -m 0755 %{buildroot}/var/clearos/subversion/repository
+install -d -m 0755 %{buildroot}/var/clearos/subversion/repositories
 install -D -m 0644 packaging/subversion_default.conf %{buildroot}/etc/clearos/storage.d/subversion_default.conf
 
 %post core
@@ -60,7 +60,7 @@ exit 0
 %exclude /usr/clearos/apps/subversion/tests
 %dir /usr/clearos/apps/subversion
 %dir /var/clearos/subversion
-%dir /var/clearos/subversion/repository
+%dir /var/clearos/subversion/repositories
 /usr/clearos/apps/subversion/deploy
 /usr/clearos/apps/subversion/language
 /usr/clearos/apps/subversion/libraries

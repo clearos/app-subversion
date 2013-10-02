@@ -4,9 +4,15 @@
 #-------------
 
 getent group svn >/dev/null || groupadd -r svn
-getent passwd svn >/dev/null || useradd -r -g svn -d /var/clearos/subversion/repository -s /sbin/nologin -c "Subversion" svn
+getent passwd svn >/dev/null || useradd -r -g svn -d /var/clearos/subversion/repositories -s /sbin/nologin -c "Subversion" svn
 
 # Initialize storage
 #-------------------
 
 /usr/sbin/storage
+
+# Set default start/boot
+#-----------------------
+
+logger -p local6.notice -t installer "app-subversion-core - disabling subversion on boot"
+/sbin/chkconfig svnserve off

@@ -6,7 +6,7 @@
 
 $app['basename'] = 'subversion';
 $app['version'] = '1.5.0';
-$app['release'] = '1';
+$app['release'] = '2';
 $app['vendor'] = 'ClearFoundation';
 $app['packager'] = 'ClearFoundation';
 $app['license'] = 'GPLv3';
@@ -35,7 +35,7 @@ $app['core_requires'] = array(
 
 $app['core_directory_manifest'] = array(
     '/var/clearos/subversion' => array(),
-    '/var/clearos/subversion/repository' => array(),
+    '/var/clearos/subversion/repositories' => array(),
 );
 
 $app['core_file_manifest'] = array(
