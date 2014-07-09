@@ -57,11 +57,9 @@ exit 0
 %files core
 %defattr(-,root,root)
 %exclude /usr/clearos/apps/subversion/packaging
-%exclude /usr/clearos/apps/subversion/tests
 %dir /usr/clearos/apps/subversion
 %dir /var/clearos/subversion
 %dir /var/clearos/subversion/repositories
 /usr/clearos/apps/subversion/deploy
 /usr/clearos/apps/subversion/language
-/usr/clearos/apps/subversion/libraries
 /etc/clearos/storage.d/subversion_default.conf
