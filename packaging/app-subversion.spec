@@ -1,8 +1,8 @@
 
 Name: app-subversion
 Epoch: 1
-Version: 1.5.0
-Release: 2%{dist}
+Version: 1.6.5
+Release: 1%{dist}
 Summary: Subversion - Core
 License: LGPLv3
 Group: ClearOS/Libraries
